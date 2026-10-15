@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eptesam Abdelkreem — Front-End Developer</title>
+<meta name="description" content="Eptesam Abdelkreem — front-end developer in training and Computer Science student. Responsive landing pages built with HTML, CSS and JavaScript.">
+<meta property="og:type" content="website"><meta property="og:title" content="Eptesam Abdelkreem — Front-End Developer"><meta property="og:description" content="Portfolio of a front-end developer in training: responsive landing pages built with HTML, CSS and JavaScript."><meta property="og:image" content="https://eptesamabdelkreem736-ctrl.github.io/portfolio/og.jpg"><meta property="og:url" content="https://eptesamabdelkreem736-ctrl.github.io/portfolio/"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0d0c0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23d9b073'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='34' text-anchor='middle' fill='%2317130a'%3EE.%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf5ec;--card:#fff;--ink:#1c1813;--muted:#6d655b;--line:#e6dccb;--gold:#b8863b;--gold-ink:#fff;--glow:rgba(184,134,59,.12);--red:#e5484d;--blue:#3b82f6;--yel:#f0b429;--grn:#3fb56b;--r:18px}
+:root[data-theme=dark]{--bg:#0d0c0f;--card:#16151a;--ink:#f3ede2;--muted:#a8a29a;--line:#2a2830;--gold:#d9b073;--gold-ink:#17130a;--glow:rgba(217,176,115,.10)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font:400 17px/1.65 'DM Sans','Cairo',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;padding-top:env(safe-area-inset-top,0)}
+[dir=rtl] :is(body,button,input,textarea){font-family:'Cairo','DM Sans',sans-serif}
+h1,h2,h3,.logo span{font-family:'Playfair Display','Cairo',serif;font-weight:600;line-height:1.1}
+[dir=rtl] :is(h1,h2,h3,.logo span){font-family:'Cairo',serif;font-weight:800}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+section{padding:46px 0}
+h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+h2::before{content:"";width:34px;height:2px;background:var(--gold)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px)}
+.bar{display:flex;align-items:center;gap:20px;height:74px}
+.logo{display:flex;align-items:center;gap:10px;font-size:23px}
+.logo b{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--gold-ink);display:grid;place-items:center;font:700 19px 'Playfair Display',serif}
+nav{margin-inline-start:auto;display:flex;gap:28px;font-weight:500}
+nav a{padding:6px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{color:var(--gold);border-color:var(--gold)}
+.tools{display:flex;gap:10px;align-items:center}
+.ib{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-size:16px;font-weight:700}
+.ib:hover{border-color:var(--gold);color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:999px;font-weight:700;border:1.5px solid var(--gold);background:var(--gold);color:var(--gold-ink);cursor:pointer;font-size:15px}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn.sm{padding:9px 18px;background:transparent;color:var(--gold)}
+.btn:hover{filter:brightness(1.08)}
+#menu{display:none}
+/* hero */
+.hero{padding:44px 0 30px;overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hello{font-size:19px;margin-bottom:4px}
+.name{font-size:clamp(46px,7vw,86px);font-weight:600;letter-spacing:-.01em;margin-bottom:16px}
+.name i{display:block;font-style:normal;color:var(--gold)}
+.role{font-size:19px;font-weight:700;margin-bottom:10px}
+.lead{max-width:28em;color:var(--muted);margin-bottom:26px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.social{display:flex;gap:12px;align-items:center;font-size:15px}
+.social a{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:700;font-size:14px}
+.social a:hover{border-color:var(--gold);color:var(--gold)}
+.art{position:relative;max-width:360px;margin-inline:auto;width:100%;aspect-ratio:1}
+.photo{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:#f5a623;box-shadow:0 0 0 8px var(--glow)}
+.photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.1)}
+.badge{position:absolute;inset:auto auto -6% -8%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 16px;font-size:14px;line-height:1.35;display:flex;gap:12px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--grn);flex:none}
+.arrow{position:absolute;inset:6% -14% auto auto;width:70px;color:var(--gold)}
+[dir=rtl] .arrow{inset:6% auto auto -14%;transform:scaleX(-1)}
+/* info cards */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.box.wide{grid-column:1/-1}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px;font-size:15px}
+.box h3{font-size:19px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.box h3 b{width:38px;height:38px;border-radius:50%;background:var(--glow);color:var(--gold);display:grid;place-items:center;font:700 15px 'DM Sans',sans-serif;flex:none}
+.box p{color:var(--muted)}.box p+p{margin-top:8px}
+.box strong{color:var(--ink);font-weight:500;display:block}
+.more{color:var(--gold);font-weight:700;cursor:pointer;background:none;border:0;padding:0;margin-top:10px;font-size:15px}
+.extra{display:none}.open .extra{display:block}
+.bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px 40px}
+.bar-r{display:grid;grid-template-columns:86px 1fr 40px;gap:10px;align-items:center;font-size:14px}
+.bar-r em{font-style:normal;color:var(--muted);text-align:end}
+.meter{height:6px;border-radius:9px;background:var(--line);overflow:hidden}
+.meter i{display:block;height:100%;width:0;border-radius:9px;background:var(--c);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.in .meter i{width:var(--w)}
+.award{display:flex;gap:18px;align-items:center;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 20px;font-size:15px;color:var(--muted)}
+.award img{width:96px;border-radius:8px;flex:none;border:1px solid var(--line)}
+.award b{color:var(--gold);display:block}
+.orbit{position:relative;width:min(940px,100%);margin:6px auto 0;direction:ltr}
+.orbit::before{content:"";position:absolute;left:50%;top:50%;width:calc(var(--R)*2);height:calc(var(--R)*2);transform:translate(-50%,-50%);border:1.5px solid var(--line);border-radius:50%}
+.orbit .core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:var(--cw);aspect-ratio:1;border-radius:50%;background:var(--glow);border:2px solid var(--gold);display:grid;place-items:center;font:600 clamp(15px,4.2vw,30px) 'Playfair Display','Cairo',serif;color:var(--ink);box-shadow:0 0 0 10px var(--glow),0 0 40px var(--glow)}
+.orbit .sk{position:absolute;width:var(--nd);height:var(--nd);border-radius:50%;background:var(--card);border:2px solid color-mix(in srgb,var(--gold) 55%,transparent);display:grid;place-items:center;opacity:0;transform:translate(-50%,-50%) scale(.5);transition:opacity .6s calc(var(--i)*.08s),transform .6s calc(var(--i)*.08s),border-color .2s}
+.orbit .sk:hover{border-color:var(--gold)}
+.orbit.in .sk{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.orbit .sk{color:var(--ink)}.orbit .sk svg{width:58%;height:58%}
+.orbit .sk span{position:absolute;white-space:nowrap;font-size:15px;font-weight:500}
+.orbit .sk span{font-size:min(17px,3.4vw)}.orbit .sk.r span{left:calc(100% + 10px)}.orbit .sk.l span{right:calc(100% + 10px)}
+.orbit .sk.t span{bottom:calc(100% + 6px)}.orbit .sk.b span{top:calc(100% + 6px)}
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card:hover{border-color:var(--gold)}
+.card .img{aspect-ratio:16/9;background:var(--line);overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card h3{font-size:20px}
+.card p{color:var(--muted);font-size:14.5px;flex:1}
+.tags{display:flex;gap:8px}
+.tags span{font-size:12px;font-weight:700;padding:2px 10px;border-radius:6px;border:1px solid var(--c);color:var(--c)}
+.go{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:700;color:var(--muted)}
+.go .arr{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--gold-ink);display:grid;place-items:center}
+[dir=rtl] .go .arr{transform:scaleX(-1)}
+/* contact */
+.talk{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,4vw,44px);background-image:radial-gradient(circle at 0 0,var(--glow),transparent 55%)}
+.talk h2{font-size:clamp(30px,4vw,42px)}
+.talk>div>p{color:var(--muted);margin-bottom:20px}
+.links{display:grid;gap:10px}
+.links a{border:1px solid var(--line);border-radius:12px;padding:11px 16px;overflow-wrap:anywhere;font-size:15px}
+.links a:hover{border-color:var(--gold)}
+form{display:grid;gap:13px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,textarea{font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--gold);outline:none}
+#st{font-size:15px;min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:24px 0;margin-top:30px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.prog{position:fixed;top:0;inset-inline-start:0;height:3px;width:0;background:var(--gold);z-index:50}
+.totop{position:fixed;inset-block-end:calc(20px + env(safe-area-inset-bottom,0px));inset-inline-end:20px;width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--gold-ink);border:0;font-size:20px;font-weight:700;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s,transform .3s;z-index:30}
+.totop.show{opacity:1;pointer-events:auto;transform:none}
+.caret{display:inline-block;width:2px;height:1.05em;background:var(--gold);margin-inline-start:3px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.role{min-height:1.6em}
+.svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.go{gap:12px}.go a:hover{color:var(--gold)}.go a.arr:hover{color:var(--gold-ink)}
+.go .code{margin-inline-start:auto;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13.5px}
+.card .img{display:block}
+@media(max-width:700px){.svcs{grid-template-columns:1fr}}
+/* motion */
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -16px}}
+@keyframes sway{0%,100%{translate:0 0;rotate:0deg}50%{translate:6px -8px;rotate:6deg}}
+.art .photo{animation:floaty 5s ease-in-out infinite}
+.art .badge{animation:floaty 6s ease-in-out -2s infinite}
+.art .arrow{animation:sway 4s ease-in-out infinite}
+.js .rv{opacity:0;transform:translateY(28px) scale(.97);transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+.js .art.rv{transform:scale(.85)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.done{transition:transform .25s,border-color .2s,box-shadow .25s}
+.js .card.rv.in:hover,.js .box.rv.in:hover,.js .award.rv.in:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(0,0,0,.28)}
+.btn,.social a,.ib{transition:transform .2s,filter .2s,border-color .2s,color .2s}
+.btn:hover,.social a:hover{transform:translateY(-2px)}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1!important;transform:none!important}.art .photo,.art .badge,.art .arrow{animation:none!important}}
+@media(max-width:980px){.hero .wrap,.talk{grid-template-columns:1fr}.info{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.art{max-width:300px}
+ nav{position:absolute;inset:74px 0 auto 0;background:var(--bg);flex-direction:column;padding:14px 20px;border-bottom:1px solid var(--line);display:none;gap:8px}
+ nav.open{display:flex}#menu{display:block}.btn.sm span{display:none}}
+@media(max-width:480px){.cta .btn{flex:1 1 100%;justify-content:center}.logo span{display:none}.bar{gap:10px}.tools{gap:6px;margin-inline-start:auto}.ib{width:36px;height:36px}.btn.sm{padding:8px 12px}}
+@media(max-width:600px){.arrow{display:none}.badge{inset:auto auto -4% 0;font-size:13px}.hero{padding-top:24px}.box.wide{padding:16px 8px}.info,.grid{grid-template-columns:1fr}.award{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="prog" aria-hidden="true"></div>
+<header><div class="wrap bar">
+ <a href="#top" class="logo"><b>E.</b><span>Eptesam.</span></a>
+ <nav id="nav"><a href="#top" data-i="n1">Home</a><a href="#about" data-i="n2">About</a><a href="#skills" data-i="n3">Skills</a><a href="#services" data-i="n6">Services</a><a href="#work" data-i="n4">Projects</a><a href="#contact" data-i="n5">Contact</a></nav>
+ <div class="tools">
+  <a class="btn sm" href="Eptesam-Abdelkreem-CV.pdf" download>⬇ <span data-i="cv">Download CV</span></a>
+  <button class="ib" id="lang" aria-label="Language">ع</button>
+  <button class="ib" id="theme" aria-label="Theme">☀</button>
+  <button class="ib" id="menu" aria-label="Menu">☰</button>
+ </div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+ <div>
+  <p class="hello"><span data-i="hi">Hello, I'm</span> 👋</p>
+  <h1 class="name"><span data-i="fn">Eptesam</span><i data-i="ln">Abdelkreem</i></h1>
+  <p class="role" aria-label="Front-End Developer | Computer Science Student"><span id="typed">Front-End Developer</span><i class="caret"></i></p>
+  <p class="lead" data-i="lead">I turn flat designs into interfaces you can actually click through.</p>
+  <div class="cta"><a class="btn" href="#work"><span data-i="c1">View my work</span> →</a><a class="btn ghost" href="#contact"><span data-i="c2">Contact me</span> ✉</a></div>
+  <div class="social"><span data-i="fol">Follow me</span>
+   <a href="https://github.com/eptesamabdelkreem736-ctrl" target="_blank" rel="noopener" aria-label="GitHub">Gh</a>
+   <a href="https://www.linkedin.com/in/eptesam-abdelkreem-521855351/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+   <a href="mailto:eptesamabdelkreem736@gmail.com" aria-label="Email">@</a></div>
+ </div>
+ <div class="art">
+  <!-- ///////////////////profile////////////// -->
+  <div class="photo"><img src="./photo.jpg" alt="Eptesam Abdelkreem"></div>
+  <svg class="arrow" viewBox="0 0 70 100" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10 8c40 10 55 50 28 78"/><path d="M42 90C30 94 22 82 32 78c10-3 14 12 2 14"/><path d="M12 8l10-6M12 8l8 10"/></svg>
+  <div class="badge"><i class="dot"></i><span data-i="avail">Available for<br>freelance projects</span></div>
+ </div>
+</div></section>
+
+<section id="about" style="padding-top:60px" data-reveal><div class="wrap">
+ <div class="info">
+  <div class="box" id="aboutbox"><h3><b>☺</b><span data-i="h_about">About me</span></h3>
+   <p data-i="about1">I'm a Computer Science student building solid front-end foundations in HTML, CSS and JavaScript through hands-on training.</p>
+   <p class="extra" data-i="about2">I like taking a static design and figuring out exactly what markup and CSS it takes to make it feel real in a browser.</p>
+   <button class="more" id="more" data-i="more">Read more</button></div>
+  <div class="box"><h3><b>🎓</b><span data-i="h_edu">Education</span></h3>
+   <p><strong data-i="e1">Bachelor of Computer Science</strong></p>
+   <p data-i="e2">Faculty of Computers & Information, Ain Shams University</p>
+   <p data-i="e3">2024 – Expected 2028</p></div>
+  <div class="box"><h3><b>▣</b><span data-i="h_tr">Training</span></h3>
+   <p><strong data-i="t1">React Front-End Development</strong></p>
+   <p data-i="t2">Digital Egypt Pioneers Initiative (Rowad Masr Al-Raqmeya)</p>
+   <p data-i="t3">iClub Front-End Summer Training Program</p></div>
+  <div class="box wide" id="skills"><h3><b>&lt;/&gt;</b><span data-i="h_sk">Skills</span></h3>
+   <div class="orbit" data-reveal><div class="core" data-i="h_sk">Skills</div><div class="sk" style="--i:0"><svg viewBox="0 0 24 24"><path d="M3.5 2l1.7 19L12 23l6.8-2L20.5 2z" fill="#e44d26"/><path d="M12 3.8V21.2l5.3-1.6 1.5-15.8z" fill="#f16529"/><text x="12" y="16.2" font-family="Arial,sans-serif" font-weight="700" text-anchor="middle" font-size="11.5" fill="#fff">5</text></svg><span>HTML</span></div><div class="sk" style="--i:1"><svg viewBox="0 0 24 24"><path d="M3.5 2l1.7 19L12 23l6.8-2L20.5 2z" fill="#1572b6"/><path d="M12 3.8V21.2l5.3-1.6 1.5-15.8z" fill="#33a9dc"/><text x="12" y="16.2" font-family="Arial,sans-serif" font-weight="700" text-anchor="middle" font-size="11.5" fill="#fff">3</text></svg><span>CSS</span></div><div class="sk" style="--i:2"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" fill="#f7df1e"/><text x="15.6" y="18.4" font-family="Arial,sans-serif" font-weight="700" text-anchor="middle" font-size="9" fill="#222">JS</text></svg><span>JavaScript</span></div><div class="sk" style="--i:3"><svg viewBox="-12 -12 24 24" fill="none" stroke="#61dafb" stroke-width="1.1"><circle r="1.9" fill="#61dafb" stroke="none"/><ellipse rx="10.5" ry="4.2"/><ellipse rx="10.5" ry="4.2" transform="rotate(60)"/><ellipse rx="10.5" ry="4.2" transform="rotate(120)"/></svg><span>React</span></div><div class="sk" style="--i:4"><svg viewBox="0 0 24 24"><rect x="3.6" y="3.6" width="16.8" height="16.8" rx="2.4" transform="rotate(45 12 12)" fill="#f05133"/><g stroke="#fff" stroke-width="1.7" fill="#fff"><path d="M8.6 8.6l5.4 5.4M11.4 11.4V16" fill="none"/><circle cx="8.6" cy="8.6" r="1.6"/><circle cx="14.2" cy="14.2" r="1.6"/><circle cx="11.4" cy="16.4" r="1.6"/></g></svg><span>Git</span></div><div class="sk" style="--i:5"><svg viewBox="0 0 24 24" style="fill:currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.921.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></div><div class="sk" style="--i:6"><svg viewBox="0 0 24 24" fill="#3b9ae8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 8c0 1.7 3.6 3 8 3s8-1.3 8-3v4c0 1.7-3.6 3-8 3s-8-1.3-8-3zm0 7c0 1.7 3.6 3 8 3s8-1.3 8-3v3c0 1.7-3.6 3-8 3s-8-1.3-8-3z"/></svg><span>SQL</span></div><div class="sk" style="--i:7"><svg viewBox="0 0 24 24"><path d="M12 1.5l9 5.2v10.6l-9 5.2-9-5.2V6.7z" fill="#00599c"/><text x="12" y="15.6" font-family="Arial,sans-serif" font-weight="700" text-anchor="middle" font-size="8.6" fill="#fff">C++</text></svg><span>C++</span></div><div class="sk" style="--i:8"><svg viewBox="0 0 24 24"><path id="py" d="M11.9 2C8 2 8.2 3.7 8.2 3.7V5.6h3.8v.6H6.7S2.5 5.7 2.5 11.9s3.7 6 3.7 6h2.2v-2.9s-.1-3.7 3.6-3.7h3.7s3.5.06 3.5-3.4V5.3S19.8 2 11.9 2z" fill="#3776ab"/><use href="#py" transform="rotate(180 12 12)" style="fill:#ffd43b"/><circle cx="9.3" cy="4.7" r=".9" fill="#fff"/><circle cx="14.7" cy="19.3" r=".9" fill="#fff"/></svg><span>Python</span></div></div></div>
+ </div>
+ <div class="award"><img src="certificate.jpg" alt="First place certificate" loading="lazy"><div><b data-i="aw1">1st place — Project Presentation Competition</b><span data-i="aw2">iClub Front-End Development Summer Training Program</span></div></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+ <h2 data-i="h_svc">What I can build for you</h2>
+ <div class="svcs">
+  <div class="box"><h3><b>▤</b><span data-i="sv1t">Landing pages</span></h3><p data-i="sv1">Clean, responsive landing pages for a brand, product or event.</p></div>
+  <div class="box"><h3><b>⇄</b><span data-i="sv2t">Responsive websites</span></h3><p data-i="sv2">Layouts that adapt from phones to large screens, built with HTML, CSS and JavaScript.</p></div>
+  <div class="box"><h3><b>{ }</b><span data-i="sv3t">Design to code</span></h3><p data-i="sv3">I turn a finished design into a careful, pixel-accurate front-end page.</p></div>
+ </div>
+ <p style="margin-top:22px"><a class="btn svc-cta" href="#contact" data-i="svc_cta">Start a project</a></p>
+</div></section>
+
+<section id="work"><div class="wrap">
+ <h2 data-i="h_pr">My projects</h2>
+ <div class="grid">
+  <article class="card"><a class="img" href="https://eptesamabdelkreem736-ctrl.github.io/Insurance-Landing-Page/" target="_blank" rel="noopener"><img src="project-insurance.webp" alt="Insurance Landing Page" loading="lazy" width="1100" height="619"></a>
+   <div class="body"><h3>Insurance Landing Page</h3><p data-i="p1">A responsive landing page for a fictional insurance company, showcasing home, life, travel, car and business insurance.</p><div class="tags" style="--c:var(--grn)"><span>HTML</span><span>CSS</span></div>
+   <div class="go"><a href="https://eptesamabdelkreem736-ctrl.github.io/Insurance-Landing-Page/" target="_blank" rel="noopener" data-i="view">View project</a><a class="code" href="https://github.com/eptesamabdelkreem736-ctrl/Insurance-Landing-Page" target="_blank" rel="noopener">&lt;/&gt; <span data-i="code">Code</span></a><a class="arr" href="https://eptesamabdelkreem736-ctrl.github.io/Insurance-Landing-Page/" target="_blank" rel="noopener" aria-label="Open project">→</a></div></div></article>
+  <article class="card"><a class="img" href="https://eptesamabdelkreem736-ctrl.github.io/brand-store/" target="_blank" rel="noopener"><img src="project-brandstore.webp" alt="BrandStore" loading="lazy" width="1100" height="619"></a>
+   <div class="body"><h3>BrandStore — Fashion E-commerce</h3><p data-i="p2">A responsive landing page for a fashion brand, featuring product categories and seasonal promotions.</p><div class="tags" style="--c:var(--blue)"><span>HTML</span><span>CSS</span></div>
+   <div class="go"><a href="https://eptesamabdelkreem736-ctrl.github.io/brand-store/" target="_blank" rel="noopener" data-i="view">View project</a><a class="code" href="https://github.com/eptesamabdelkreem736-ctrl/brand-store" target="_blank" rel="noopener">&lt;/&gt; <span data-i="code">Code</span></a><a class="arr" href="https://eptesamabdelkreem736-ctrl.github.io/brand-store/" target="_blank" rel="noopener" aria-label="Open project">→</a></div></div></article>
+  <article class="card"><a class="img" href="https://eptesamabdelkreem736-ctrl.github.io/Mason-Leblanc/" target="_blank" rel="noopener"><img src="project-mason.webp" alt="Mason Leblanc" loading="lazy" width="1100" height="619"></a>
+   <div class="body"><h3>Mason Leblanc — Photography</h3><p data-i="p3">A dark, editorial portfolio for a fashion photographer, built around a full-screen hero image.</p><div class="tags" style="--c:var(--muted)"><span>HTML</span><span>CSS</span></div>
+   <div class="go"><a href="https://eptesamabdelkreem736-ctrl.github.io/Mason-Leblanc/" target="_blank" rel="noopener" data-i="view">View project</a><a class="code" href="https://github.com/eptesamabdelkreem736-ctrl/Mason-Leblanc" target="_blank" rel="noopener">&lt;/&gt; <span data-i="code">Code</span></a><a class="arr" href="https://eptesamabdelkreem736-ctrl.github.io/Mason-Leblanc/" target="_blank" rel="noopener" aria-label="Open project">→</a></div></div></article>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="talk">
+ <div><h2 data-i="h_ct">Let's work together!</h2><p data-i="ct">Have a project in mind? I'd love to hear about it. Send a message and it goes straight to my inbox.</p>
+  <div class="links"><a href="mailto:eptesamabdelkreem736@gmail.com">✉ eptesamabdelkreem736@gmail.com</a><a href="tel:01028657863" dir="ltr">☎ 01028657863</a><a href="https://www.linkedin.com/in/eptesam-abdelkreem-521855351/" target="_blank" rel="noopener">in LinkedIn</a></div></div>
+ <form id="f">
+  <label><span data-i="l1">Name</span><input name="name" required></label>
+  <label><span data-i="l2">Email</span><input name="email" type="email" required></label>
+  <label><span data-i="l3">Message</span><textarea name="message" rows="4" required></textarea></label>
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <button class="btn" type="submit" style="justify-self:start" data-i="send">Get in touch</button><p id="st" role="status"></p>
+ </form>
+</div></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Eptesam Abdelkreem. All rights reserved.</span><a href="#top" data-i="up">Back to top ↑</a></div></footer>
+
+<button class="totop" aria-label="Back to top">↑</button>
+<script>
+const T={en:{n1:"Home",n2:"About",n3:"Skills",n4:"Projects",n5:"Contact",n6:"Services",code:"Code",h_svc:"What I can build for you",sv1t:"Landing pages",sv1:"Clean, responsive landing pages for a brand, product or event.",sv2t:"Responsive websites",sv2:"Layouts that adapt from phones to large screens, built with HTML, CSS and JavaScript.",sv3t:"Design to code",sv3:"I turn a finished design into a careful, pixel-accurate front-end page.",svc_cta:"Start a project",words:["Front-End Developer","Computer Science Student","Open to freelance projects"],cv:"Download CV",hi:"Hello, I'm",fn:"Eptesam",ln:"Abdelkreem",role:"Front-End Developer | Computer Science Student",lead:"I turn flat designs into interfaces you can actually click through.",c1:"View my work",c2:"Contact me",fol:"Follow me",avail:"Available for<br>freelance projects",
+h_about:"About me",about1:"I'm a Computer Science student building solid front-end foundations in HTML, CSS and JavaScript through hands-on training.",about2:"I like taking a static design and figuring out exactly what markup and CSS it takes to make it feel real in a browser.",more:"Read more",less:"Show less",
+h_edu:"Education",e1:"Bachelor of Computer Science",e2:"Faculty of Computers & Information, Ain Shams University",e3:"2024 – Expected 2028",h_tr:"Training",t1:"React Front-End Development",t2:"Digital Egypt Pioneers Initiative (Rowad Masr Al-Raqmeya)",t3:"iClub Front-End Summer Training Program",h_sk:"Skills",s4:"Responsive",
+aw1:"1st place — Project Presentation Competition",aw2:"iClub Front-End Development Summer Training Program",h_pr:"My projects",
+p1:"A responsive landing page for a fictional insurance company, showcasing home, life, travel, car and business insurance.",p2:"A responsive landing page for a fashion brand, featuring product categories and seasonal promotions.",p3:"A dark, editorial portfolio for a fashion photographer, built around a full-screen hero image.",view:"View project",
+h_ct:"Let's work together!",ct:"Have a project in mind? I'd love to hear about it. Send a message and it goes straight to my inbox.",l1:"Name",l2:"Email",l3:"Message",send:"Get in touch",up:"Back to top ↑",ok:"Message sent. Thank you!",err:"Could not send. Please email me directly.",sending:"Sending…"},
+ar:{n1:"الرئيسية",n2:"عني",n3:"المهارات",n4:"أعمالي",n5:"تواصل",n6:"خدماتي",code:"الكود",h_svc:"أقدر أعمل لك إيه",sv1t:"صفحات هبوط",sv1:"صفحات هبوط نظيفة ومتجاوبة لبراند أو منتج أو حدث.",sv2t:"مواقع متجاوبة",sv2:"تصميمات بتتظبط من الموبايل لحد الشاشات الكبيرة، بـ HTML وCSS وJavaScript.",sv3t:"من التصميم للكود",sv3:"بحوّل التصميم الجاهز لصفحة ويب مظبوطة بالتفصيل.",svc_cta:"ابدأ مشروعك",words:["مطورة واجهات أمامية","طالبة علوم حاسب","متاحة لمشاريع الفريلانس"],cv:"تحميل السيرة الذاتية",hi:"أهلاً، أنا",fn:"ابتسام",ln:"عبد الكريم",role:"مطورة واجهات أمامية | طالبة علوم حاسب",lead:"طالبة علوم حاسب بتتعلم إزاي تحول التصميم لتجربة حقيقية على الويب.",c1:"شوف أعمالي",c2:"تواصل معايا",fol:"تابعني",avail:"متاحة لمشاريع<br>الفريلانس",
+h_about:"عني",about1:"أنا طالبة علوم حاسب، ببني أساس قوي في HTML وCSS وJavaScript من خلال تدريب عملي.",about2:"بحب آخد تصميم ثابت وأفكر بالظبط إيه الكود اللي هيخليه حقيقي في المتصفح.",more:"اقرأ المزيد",less:"عرض أقل",
+h_edu:"التعليم",e1:"بكالوريوس علوم الحاسب",e2:"كلية الحاسبات والمعلومات، جامعة عين شمس",e3:"2024 – التخرج المتوقع 2028",h_tr:"التدريب",t1:"تطوير الواجهات الأمامية بـ React",t2:"مبادرة رواد مصر الرقمية (DEPI)",t3:"برنامج iClub التدريبي الصيفي للواجهات الأمامية",h_sk:"المهارات",s4:"تصميم متجاوب",
+aw1:"المركز الأول — مسابقة عرض المشاريع",aw2:"برنامج iClub التدريبي الصيفي لتطوير الواجهات الأمامية",h_pr:"أعمالي",
+p1:"صفحة هبوط متجاوبة لشركة تأمين افتراضية، بتعرض تأمين المنزل والحياة والسفر والسيارات والأعمال.",p2:"صفحة هبوط متجاوبة لبراند أزياء، فيها أقسام المنتجات وعروض الموسم.",p3:"بورتفوليو داكن وأنيق لمصور أزياء، مبني حول صورة كاملة في الواجهة.",view:"شوف المشروع",
+h_ct:"خلينا نشتغل سوا!",ct:"عندك مشروع في بالك؟ يسعدني أسمع عنه. ابعت رسالة وهتوصلني على الإيميل مباشرة.",l1:"الاسم",l2:"الإيميل",l3:"الرسالة",send:"تواصل معايا",up:"↑ لأعلى الصفحة",ok:"تم إرسال الرسالة. شكراً ليك!",err:"حصلت مشكلة في الإرسال. ابعتلي على الإيميل مباشرة.",sending:"جاري الإرسال…"}};
+const $=s=>document.querySelector(s),root=document.documentElement;
+const get=k=>{try{return localStorage.getItem(k)}catch(e){return null}},set=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+let lang=get('lang')||'en';
+let tw=0,tc=0,td=false,tt;
+function typeLoop(){clearTimeout(tt);const el=$('#typed'),w=T[lang].words,word=w[tw%w.length];
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=w[0];return}
+ if(!td){tc++;el.textContent=word.slice(0,tc);if(tc==word.length){td=true;tt=setTimeout(typeLoop,1700)}else tt=setTimeout(typeLoop,70)}
+ else{tc--;el.textContent=word.slice(0,tc);if(tc==0){td=false;tw++;tt=setTimeout(typeLoop,350)}else tt=setTimeout(typeLoop,35)}}
+function setLang(l){lang=l;tw=0;tc=0;td=false;set('lang',l);root.lang=l;root.dir=l=='ar'?'rtl':'ltr';
+ document.querySelectorAll('[data-i]').forEach(e=>{const v=T[l][e.dataset.i];if(v)e.innerHTML=v});
+ $('#more').textContent=T[l][$('#aboutbox').classList.contains('open')?'less':'more'];
+ $('#lang').textContent=l=='ar'?'EN':'ع';typeLoop();document.title=l=='ar'?'ابتسام عبد الكريم — مطورة واجهات أمامية':'Eptesam Abdelkreem — Front-End Developer'}
+function setTheme(t){root.dataset.theme=t;set('theme',t);$('#theme').textContent=t=='dark'?'☀':'☾'}
+setTheme(get('theme')||'dark');setLang(lang);
+$('#lang').onclick=()=>setLang(lang=='ar'?'en':'ar');
+$('#theme').onclick=()=>setTheme(root.dataset.theme=='dark'?'light':'dark');
+const pr=$('.prog'),tp=$('.totop');
+addEventListener('scroll',()=>{const h=root,max=h.scrollHeight-h.clientHeight;pr.style.width=(max>0?scrollY/max*100:0)+'%';tp.classList.toggle('show',scrollY>600)},{passive:true});
+tp.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+$('#menu').onclick=()=>$('#nav').classList.toggle('open');
+$('#nav').onclick=()=>$('#nav').classList.remove('open');
+$('#more').onclick=()=>{$('#aboutbox').classList.toggle('open');setLang(lang)};
+function layoutOrbit(){const o=$('.orbit'),w=o.clientWidth,small=w<560,nd=small?48:88,R=small?Math.min(w/2-36,130):Math.min(w*.3,240),h=2*R+nd+(small?64:100);
+ o.style.setProperty('--R',R+'px');o.style.setProperty('--nd',nd+'px');o.style.setProperty('--cw',(small?R*.7:R*.95)+'px');o.style.height=h+'px';
+ o.querySelectorAll('.sk').forEach((n,i,all)=>{const a=i/all.length*2*Math.PI,x=Math.sin(a),y=-Math.cos(a);
+  n.style.left=(w/2+R*x)+'px';n.style.top=(h/2+R*y)+'px';
+  n.className='sk '+(small?'b':Math.abs(x)<.3?(y<0?'t':'b'):(x>0?'r':'l'));
+  n.querySelector('span').style.cssText=Math.abs(x)<.3||small?'left:50%;transform:translateX(-50%)':'top:50%;transform:translateY(-50%)'})}
+layoutOrbit();addEventListener('resize',layoutOrbit);
+root.classList.add('js');
+const sel='.hero .wrap>div:first-child>*,.art,.info .box,.award,main h2,.card,.svcs .box,.svc-cta,.talk>div,.talk form';
+document.querySelectorAll(sel).forEach(el=>{el.classList.add('rv');el.style.setProperty('--d',[].indexOf.call(el.parentElement.children,el)%5*.1+'s')});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');setTimeout(()=>e.target.classList.add('done'),1500);io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv,[data-reveal]').forEach(e=>io.observe(e));
+const links=[...document.querySelectorAll('nav a')],secs=links.map(a=>$(a.getAttribute('href')));
+addEventListener('scroll',()=>{let i=0;secs.forEach((s,n)=>{if(s.getBoundingClientRect().top<160)i=n});links.forEach((a,n)=>a.classList.toggle('on',n==i))},{passive:true});
+$('#f').onsubmit=async e=>{e.preventDefault();const st=$('#st');st.textContent=T[lang].sending;
+ try{const r=await fetch('https://formsubmit.co/ajax/eptesamabdelkreem736@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(e.target)))});
+  if(!r.ok)throw 0;st.textContent=T[lang].ok;e.target.reset()}catch(x){st.textContent=T[lang].err}};
+</script>
+</body>
+</html>
